@@ -1,6 +1,6 @@
 import "./Product.css";
-const Product = ({ product }) => {
-  const { img, name, seller, ratings, price } = product;
+const Product = ({ product, handelAddToCart }) => {
+  const { id, img, name, seller, ratings, price } = product;
 
   return (
     <div className="product">
@@ -11,7 +11,9 @@ const Product = ({ product }) => {
         <p>Manufacturer: {seller}</p>
         <p>Rating: {ratings} Star</p>
       </div>
-      <button className="btn-cart">Add to Cart</button>
+      <button onClick={() => handelAddToCart(product)} className="btn-cart">
+        Add to Cart
+      </button>
     </div>
   );
 };
