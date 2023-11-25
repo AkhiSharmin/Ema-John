@@ -1,6 +1,7 @@
 import "./Cart.css";
 
 const Cart = ({ cart }) => {
+  console.log(cart);
   //price
   let totalPrice = 0;
   //shipping
